@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace FlatFileDemo.Models
 {
     [DelimitedRecord(",")]
-    [IgnoreFirst]
-    public class FHOrganisation
+    public class FHOrganisationMulti
     {
+        public string? Tag { get; set; }
         public int Index { get; set; }
         public string? Id { get; set; }
         [FieldQuoted]
