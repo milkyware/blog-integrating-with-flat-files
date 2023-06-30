@@ -11,7 +11,7 @@ namespace FlatFileDemo.Models
     public class FHCustomerFixed
     {
         [FieldFixedLength(5)]
-        public int CustId;
+        public int Id;
 
         [FieldFixedLength(30)]
         [FieldTrim(TrimMode.Both)]
