@@ -73,6 +73,16 @@ namespace FlatFileDemo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] customers_fixed {
+            get {
+                object obj = ResourceManager.GetObject("customers_fixed", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] mixed_customer_organisations {
             get {
                 object obj = ResourceManager.GetObject("mixed_customer_organisations", resourceCulture);

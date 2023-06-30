@@ -20,7 +20,7 @@ namespace FlatFileDemo
         }
 
         [Fact]
-        public void GetDelmitedRecords()
+        public void GetDelimitedRecords()
         {
             using var ms = new MemoryStream(Resources.customers);
             using var sr = new StreamReader(ms);
@@ -35,7 +35,7 @@ namespace FlatFileDemo
         }
 
         [Fact]
-        public async Task GetDelimitedMixedRecords()
+        public void GetDelimitedMixedRecords()
         {
             using var ms = new MemoryStream(Resources.mixed_customer_organisations);
             using var sr = new StreamReader(ms);
@@ -49,6 +49,19 @@ namespace FlatFileDemo
 
                 if (r is FHOrganisationMulti)
                     _output.WriteLine((r as FHOrganisationMulti).Name);
+            }
+        }
+
+        [Fact]
+        public async Task GetFixedRecords()
+        {
+            using var ms = new MemoryStream(Resources.customers_fixed);
+            using var sr = new StreamReader(ms);
+            var engine = new FixedFileEngine<FHCustomerFixed>();
+
+            foreach (var c in engine.ReadStream(sr))
+            {
+                _output.WriteLine(c.Name);
             }
         }
 

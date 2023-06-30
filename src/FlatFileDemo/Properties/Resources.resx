@@ -121,6 +121,9 @@
   <data name="customers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customers.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="customers_fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customers_fixed.txt;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="mixed_customer_organisations" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mixed_customer_organisations.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
