@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FlatFileDemo.ClassMaps
 {
-    public class OrganisationMixedMap : ClassMap<Organisation>
+    public class OrganisationMixedMap : ClassMap<CHOrganisation>
     {
         public OrganisationMixedMap()
         {

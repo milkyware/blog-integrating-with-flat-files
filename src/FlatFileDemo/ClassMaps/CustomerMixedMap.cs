@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace FlatFileDemo.ClassMaps
 {
-    public class CustomerMixedMap : ClassMap<Customer>
+    public class CustomerMixedMap : ClassMap<CHCustomer>
     {
         public CustomerMixedMap()
         {
             Map(m => m.Id).Index(2);
             Map(m => m.FirstName).Index(3);
-            Map(m => m.Surame).Index(4);
+            Map(m => m.Surname).Index(4);
             Map(m => m.Company).Index(5);
             Map(m => m.City).Index(6);
             Map(m => m.Country).Index(7);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FlatFileDemo.Models
 {
-    public class Organisation
+    public class CHOrganisation
     {
         public string? Id { get; set; }
         public string? Name { get; set; }

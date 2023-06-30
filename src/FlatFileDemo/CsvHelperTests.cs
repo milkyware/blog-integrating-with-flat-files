@@ -23,7 +23,7 @@ namespace FlatFileDemo
             using var csv = new CsvReader(sr, new CsvConfiguration(CultureInfo.InvariantCulture));
             csv.Context.RegisterClassMap<CustomerMap>();
 
-            var records = csv.GetRecords<Customer>();
+            var records = csv.GetRecords<CHCustomer>();
         }
 
         [Fact]
@@ -34,8 +34,8 @@ namespace FlatFileDemo
             using var csv = new CsvReader(sr, new CsvConfiguration(CultureInfo.InvariantCulture));
             csv.Context.RegisterClassMap<CustomerMap>();
 
-            var records = new List<Customer>();
-            await foreach (var r in csv.GetRecordsAsync<Customer>())
+            var records = new List<CHCustomer>();
+            await foreach (var r in csv.GetRecordsAsync<CHCustomer>())
             {
                 records.Add(r);
             }
@@ -49,10 +49,10 @@ namespace FlatFileDemo
             using var csv = new CsvReader(sr, new CsvConfiguration(CultureInfo.InvariantCulture));
             csv.Context.RegisterClassMap<CustomerMap>();
 
-            var records = new List<Customer>();
+            var records = new List<CHCustomer>();
             while (await csv.ReadAsync())
             {
-                var r = csv.GetRecord<Customer>();
+                var r = csv.GetRecord<CHCustomer>();
                 records.Add(r);
             }
         }
@@ -75,11 +75,11 @@ namespace FlatFileDemo
                 switch (csv.GetField(0))
                 {
                     case "c":
-                        var c = csv.GetRecord<Customer>();
+                        var c = csv.GetRecord<CHCustomer>();
                         records.Add(c);
                         break;
                     case "o":
-                        var o = csv.GetRecord<Organisation>();
+                        var o = csv.GetRecord<CHOrganisation>();
                         records.Add(o);
                         break;
                     default:

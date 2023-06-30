@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace FlatFileDemo.Models
 {
-    public class Customer
+    public class CHCustomer
     {
         public string? Id { get; set; }
         public string? FirstName { get; set; }
-        public string? Surame { get; set; }
+        public string? Surname { get; set; }
         public string? Company { get; set; }
         public string? City { get; set; }
         public string? Country { get; set; }
